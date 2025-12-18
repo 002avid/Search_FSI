@@ -101,12 +101,12 @@ def graph_search(problem, fringe):
     closed = {}
     fringe.append(Node(problem.initial))
     while fringe:
-        count += 1
         node = fringe.pop()
         if problem.goal_test(node.state):
             print("Visited nodes = ", count)
             return node
         if node.state not in closed:
+            count += 1
             closed[node.state] = True
             fringe.extend(node.expand(problem))
     return None
