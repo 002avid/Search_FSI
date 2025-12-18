@@ -1,10 +1,8 @@
 # Search methods
 
 import search
-from utils import branch_and_bound_underestimation_class
 
 ab = search.GPSProblem('A', 'B', search.romania)
-oe = search.GPSProblem('O', 'E', search.romania)
 
 print("BFS")
 print(search.breadth_first_graph_search(ab).path())
